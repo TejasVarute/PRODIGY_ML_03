@@ -1,7 +1,3 @@
-Here’s a description for a GitHub repository implementing a K-means clustering algorithm for grouping retail store customers based on purchase history:
-
----
-
 # Customer Segmentation using K-Means Clustering
 
 ## Overview
