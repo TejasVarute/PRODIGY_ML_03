@@ -1,32 +1,48 @@
-# Customer Segmentation using K-Means Clustering
+# Cat vs Dog Classification using Support Vector Machine (SVM)
 
 ## Overview
 
-This project applies **K-Means Clustering**, an unsupervised machine learning algorithm, to group customers of a retail store based on their purchase history. The goal is to perform **customer segmentation**, enabling the business to understand different customer groups and tailor marketing strategies effectively.
+This project implements a **Support Vector Machine (SVM)** to classify images of cats and dogs using the **Kaggle Cats and Dogs Dataset**. SVM is a supervised machine learning algorithm, particularly effective for binary classification tasks. This project preprocesses image data, extracts features, and trains an SVM model to distinguish between cats and dogs.
 
 ## Features
 
-- **Customer Segmentation**:
-  - Groups customers based on their purchase behavior.
-- **Cluster Visualization**:
-  - Visualizes customer groups in 2D/3D space for insights.
-- **Scalable Algorithm**:
-  - Works with datasets of various sizes and dimensions.
-- **Preprocessing Pipeline**:
-  - Includes data cleaning, normalization, and feature selection.
+- **Image Preprocessing**:
+  - Resizes and normalizes images for uniform feature extraction.
+- **Feature Extraction**:
+  - Uses Histogram of Oriented Gradients (HOG) or pre-trained deep learning models for feature generation.
+- **SVM Classification**:
+  - Trains an SVM classifier with the extracted features for accurate image categorization.
+- **Evaluation Metrics**:
+  - Accuracy, precision, recall, and confusion matrix to assess model performance.
 
 ## Technologies Used
 
 - **Programming Language**: Python
 - **Libraries**:
-  - pandas: For data manipulation.
-  - NumPy: For numerical computations.
-  - scikit-learn: For clustering and evaluation.
-  - matplotlib & seaborn: For data visualization.
-  - plotly (optional): For interactive cluster plots.
+  - OpenCV: For image processing.
+  - scikit-learn: For SVM implementation and evaluation.
+  - NumPy: For numerical operations.
+  - matplotlib & seaborn: For visualization.
+  - PIL (Pillow): For image handling.
+
+## Example Workflow
+
+### Preprocessing
+- Resize all images to a uniform size (e.g., 128x128).
+- Convert images to grayscale for simplicity.
+
+### Feature Extraction
+- Use **HOG** (Histogram of Oriented Gradients) for feature extraction.
+- Optionally, use features from a pre-trained model like VGG16 or ResNet.
+
+### SVM Training
+- Train the SVM classifier with a radial basis function (RBF) kernel for optimal separation of features.
+
+### Evaluation
+- Calculate metrics: accuracy, precision, recall, F1-score.
+- Display confusion matrix and a few misclassified examples.
 
 ## Future Enhancements
 
-- Explore advanced clustering algorithms like DBSCAN or Hierarchical Clustering.
-- Add a web interface for clustering insights.
-- Integrate demographic data (e.g., age, location) for richer segmentation.
+- Add real-time image classification functionality using a webcam or uploaded images.
+- Optimize the pipeline for large datasets using distributed computing.
